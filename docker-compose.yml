@@ -1,0 +1,29 @@
+version: "3"
+services:
+  nginx:
+    build: ./nginx
+    container_name: nginx
+    links:
+      - web
+    depends_on:
+      - web
+    volumes:
+      - static_volume:/app/staticfiles
+      - media_volume:/app/media
+    ports:
+      - "80:80"
+      - "443:443"
+  web:
+    container_name: web
+    build: .
+    command: >
+      sh -c "python manage.py collectstatic --noinput &&
+            gunicorn deploy_humanhack.wsgi:application --bind 0.0.0.0:8000"
+    ports:
+      - "8077:8077"
+    volumes:
+      - static_volume:/app/staticfiles
+      - media_volume:/app/media
+volumes:
+  media_volume:
+  static_volume:
