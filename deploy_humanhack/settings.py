@@ -32,6 +32,11 @@ CSRF_TRUSTED_ORIGINS = [
     'http://85.192.41.43/',
 ]
 
+CORS_ALLOWED_ORIGINS = [
+    'http://localhost:3030',
+    'http://85.192.41.43/',
+]
+
 # Application definition
 
 INSTALLED_APPS = [
