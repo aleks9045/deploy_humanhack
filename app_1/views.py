@@ -8,4 +8,9 @@ from .serializers import *
 class Math_theoryAPIView(APIView):
     def get(self, request):
         w = Math_theory.objects.all()
-        return Response({'posts': Math_theorySerializer(w, many=True).data})
+        return Response({'theory': Math_theorySerializer(w, many=True).data})
+
+class Math_taskAPIView(APIView):
+    def get(self, request):
+        w = Math_task.objects.all()
+        return Response({'task': Math_taskSerializer(w, many=True).data})
