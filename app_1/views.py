@@ -25,7 +25,7 @@ class Animals_theoryAPIView(APIView):
 
 class Animals_taskAPIView(APIView):
     def get(self, request):
-        w = Animals_theory.objects.all()
+        w = Animals_task.objects.all()
         return Response({'task': Animals_taskSerializer(w, many=True).data})
 
 
@@ -51,4 +51,3 @@ class English_taskAPIView(APIView):
     def get(self, request):
         w = English_task.objects.all()
         return Response({'task': English_taskSerializer(w, many=True).data})
-
