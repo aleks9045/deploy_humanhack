@@ -6,3 +6,4 @@ pytz==2023.3
 sqlparse==0.4.3
 tzdata==2023.3
 gunicorn
+python-dotenv
