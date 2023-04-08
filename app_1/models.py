@@ -13,6 +13,8 @@ class Math_theory(models.Model):
 
 class Math_task(models.Model):
     number_task = models.IntegerField()
+    title = models.CharField(max_length=255, default='SOME STRING')
+    content = models.TextField(blank=True)
     condition = models.TextField()
     answer = models.CharField(max_length=255)
 
@@ -33,7 +35,8 @@ class Animals_theory(models.Model):
 
 class Animals_task(models.Model):
     number_task = models.IntegerField()
-    text = models.TextField()
+    title = models.CharField(max_length=255, default='SOME STRING')
+    content = models.TextField(blank=True)
     condition = models.TextField()
     answer = models.CharField(max_length=255)
 
@@ -53,7 +56,8 @@ class Read_theory(models.Model):
 
 class Read_task(models.Model):
     number_task = models.IntegerField()
-    text = models.TextField()
+    title = models.CharField(max_length=255, default='SOME STRING')
+    content = models.TextField(blank=True)
     condition = models.TextField()
     answer = models.CharField(max_length=255)
 
@@ -73,7 +77,8 @@ class English_theory(models.Model):
 
 class English_task(models.Model):
     number_task = models.IntegerField()
-    text = models.TextField()
+    title = models.CharField(max_length=255, default='SOME STRING')
+    content = models.TextField(blank=True)
     condition = models.TextField()
     answer = models.CharField(max_length=255)
 
