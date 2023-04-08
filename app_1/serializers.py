@@ -10,6 +10,8 @@ class Math_theorySerializer(serializers.Serializer):
 
 class Math_taskSerializer(serializers.Serializer):
     number_task = serializers.IntegerField()
+    title = serializers.CharField()
+    content = serializers.CharField()
     condition = serializers.CharField()
     answer = serializers.CharField(max_length=255)
 
@@ -23,7 +25,8 @@ class Animals_theorySerializer(serializers.Serializer):
 
 class Animals_taskSerializer(serializers.Serializer):
     number_task = serializers.IntegerField()
-    text = serializers.CharField()
+    title = serializers.CharField()
+    content = serializers.CharField()
     condition = serializers.CharField()
     answer = serializers.CharField(max_length=255)
 
@@ -37,7 +40,8 @@ class Read_theorySerializer(serializers.Serializer):
 
 class Read_taskSerializer(serializers.Serializer):
     number_task = serializers.IntegerField()
-    text = serializers.CharField()
+    title = serializers.CharField()
+    content = serializers.CharField()
     condition = serializers.CharField()
     answer = serializers.CharField(max_length=255)
 
@@ -51,6 +55,7 @@ class English_theorySerializer(serializers.Serializer):
 
 class English_taskSerializer(serializers.Serializer):
     number_task = serializers.IntegerField()
-    text = serializers.CharField()
+    title = serializers.CharField()
+    content = serializers.CharField()
     condition = serializers.CharField()
     answer = serializers.CharField(max_length=255)
