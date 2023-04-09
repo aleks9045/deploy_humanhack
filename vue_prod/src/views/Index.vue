@@ -5,28 +5,28 @@
         </h1>
     </div>
         <div class="all_lessons">
-            <router-link to="/math/theory1"><div class="lesson math">
-                <img src="@/img/math.svg" alt="" class="lesson_preview">
-                <p class="lesson_name">
-                    МАТЕМАТИКА
-                </p>
-            </div></router-link>
             <router-link to="/read/theory1"><div class="lesson read">
                 <img src="@/img/read.svg" alt="" class="lesson_preview">
                 <p class="lesson_name">
-                    ЧТЕНИЕ
+                    ЧТЕНИЕ 3+
                 </p>
             </div></router-link>
             <router-link to="/animals/theory1"><div class="lesson animals">
                 <img src="@/img/animals.svg" alt="" class="lesson_preview">
                 <p class="lesson_name">
-                    ЖИВОТНЫЕ
+                    ЖИВОТНЫЕ 4+
+                </p>
+            </div></router-link>
+            <router-link to="/math/theory1"><div class="lesson math">
+                <img src="@/img/math.svg" alt="" class="lesson_preview">
+                <p class="lesson_name">
+                    МАТЕМАТИКА 5+
                 </p>
             </div></router-link>
             <router-link to="/english/theory1"><div class="lesson eng">
                 <img src="@/img/eng.svg" alt="" class="lesson_preview">
                 <p class="lesson_name">
-                    АНГЛИЙСКИЙ
+                    АНГЛИЙСКИЙ 6+
                 </p>
             </div></router-link>
         </div>
@@ -47,15 +47,18 @@
     }
 
     .lesson_name{
-        font-size: 20px;
+        font-size: 16px;
         line-height: 22px;
         display: flex;
         align-items: center;
         text-align: center;
-        letter-spacing: -0.04em;
+        letter-spacing: -0.05em;
         color: #FFFFFF;
     }
-    .math, .eng{
+    .math{
+        background: #FF843F;
+    }
+    .eng{
         background: var(--pink);
     }
     .lesson{

@@ -1,9 +1,9 @@
 <script setup>
     import {ref} from 'vue';
     const links = ref([
-        {name: 'Математика', href: '/math/theory1'},
+        {name: 'Чтение', href: '/read/theory1'},
         {name: 'Животные', href: '/animals/theory1'},
-        {name: 'Чтение', href: '/reading/theory1'},
+        {name: 'Математика', href: '/math/theory1'},
         {name: 'Английский', href: '/english/theory1'}
     ])
 

@@ -11,7 +11,6 @@
         },
         nextStad: {
             type: String,
-            required: true,
             default: '/'
         }
         })
