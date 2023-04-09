@@ -5,8 +5,10 @@ services:
     container_name: nginx
     links:
       - web
+      - vue
     depends_on:
       - web
+      - vue
     volumes:
       - static_volume:/app/staticfiles
       - media_volume:/app/media
@@ -24,6 +26,11 @@ services:
     volumes:
       - static_volume:/app/staticfiles
       - media_volume:/app/media
+  vue:
+    container_name: vue
+    build: ./Vue_app_deploy
+    ports:
+      - "5173:5173"
 volumes:
   media_volume:
   static_volume:
