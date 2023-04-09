@@ -28,7 +28,7 @@ services:
       - media_volume:/app/media
   vue:
     container_name: vue
-    build: ./Vue_app_deploy
+    build: ./vue
     ports:
       - "5173:5173"
 volumes:
